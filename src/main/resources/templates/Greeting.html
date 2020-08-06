@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/solar/bootstrap.min.css"
+      integrity="sha384-iDw+DjLp94cdk+ODAgTY4IZ6d9aaRpG9KHr168TPxrfQ9wv/DTVC+cWyojoxjHBT" crossorigin="anonymous">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color: #FFF8DC;">
+
+
+<div class="jumbotron container text-center col-lg-5 col-lg-offset-5">
+    <h1 style="color: #FFF8DC;">The words that you wrote</h1>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col" style="color: #FFF8DC;">Word</th>
+            <th scope="col" style="color: #FFF8DC;">Is Palindrome</th>
+        </tr>
+        </thead>
+        <tbody style="color: cadetblue">
+        <tr th:each="word : ${words}">
+            <td th:text="${word.getKey()}">What</td>
+            <td th:text="${word.getValue()}">Happened?</td>
+            <br>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

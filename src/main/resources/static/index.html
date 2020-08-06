@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.0/solar/bootstrap.min.css"
+      integrity="sha384-iDw+DjLp94cdk+ODAgTY4IZ6d9aaRpG9KHr168TPxrfQ9wv/DTVC+cWyojoxjHBT" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color: #FFF8DC;">
+
+<div class="jumbotron container text-center col-lg-5 col-lg-offset-5">
+    <h3 style="color: #FFF8DC;">Write words with "," in between to check if palindrome or not</h3>
+    <form action="/greeting" method="get" onsubmit="return getElement()">
+        <input type="text" name="input"/>
+        <button type="submit" class="btn btn-warning">Check Palindrome</button>
+
+    </form>
+</div>
+<script>
+    function getElement() {
+        var text = document.getElementById("text").value;
+        if (text.length == 0) {
+            alert("You have to write something")
+            return false;
+        } else {
+            submitOK = "true";
+        }
+
+    }
+
+</script>
+</body>
+</html>
